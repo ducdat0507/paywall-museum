@@ -1,11 +1,19 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-    --font-serif: Georgia, sans-serif;
+    --font-serif: "DM Serif Display", Georgia, serif;
+    --font-sans: Inter, Arial, Helvetica, sans-serif;
+}
+body {
+    @apply dark:bg-black dark:text-white
 }
 h1, h2, h3, h4, h5, h6 {
-    @apply font-serif;
+    @apply font-serif tracking-tighter;
 }
-.btn {
-    
+.button {
+    @apply inline-block bg-orange-900 shadow-md px-3 py-2 rounded-md decoration-dashed duration-300
+        hover:bg-orange-900 hover:text-orange-200 hover:underline hover:-translate-y-[1px] hover:shadow-lg
+        active:bg-orange-950 active:text-orange-400 active:translate-y-0 active:duration-0
 }

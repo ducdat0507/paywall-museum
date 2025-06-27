@@ -1,0 +1,9 @@
+[
+    {
+        "name": "Pay to remove paywall",
+        "paywalls": {
+            "image": "/res/images/a.png",
+            "site": "https://example.com"
+        }
+    }
+]
