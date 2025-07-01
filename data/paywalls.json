@@ -1,9 +1,16 @@
 [
     {
+        "id": "remove-paywall",
         "name": "Pay to remove paywall",
-        "paywalls": {
-            "image": "/res/images/a.png",
-            "site": "https://example.com"
-        }
+        "paywalls": [
+            {
+                "imageUrl": "https://placehold.co/600x400",
+                "imageAlt": "Subscribe to remove this paywall",
+                "links": [
+                    { "url": "https://example.com/", "type": "paywallPage" },
+                    { "url": "https://example.com/pricing", "type": "pricingPage" }
+                ]
+            }
+        ]
     }
 ]

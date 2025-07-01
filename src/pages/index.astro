@@ -1,10 +1,13 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import PaywallSeriesList from '../components/PaywallSeriesList.svelte';
 import Layout from '../layouts/Layout.astro';
+import { getPage } from '../lib/paywalls';
 
 import "../styles/global.css";
 ---
 
 <Layout title="The Paywall Museum">
-	<Welcome />
+	<main class="container mx-auto">
+		<PaywallSeriesList startPage={1} startItems={getPage(0)} client:load  />
+	</main>
 </Layout>
