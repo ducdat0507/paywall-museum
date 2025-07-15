@@ -1,0 +1,48 @@
+---
+let {
+    status
+} = Astro.props;
+
+let titles = {
+    404: [
+        "not found",
+        "this page doesn't exist",
+        "this paywall doesn't exist",
+        "no such paywall, sorry",
+        "there's nothing here",
+        "you shouldn't be here",
+        "looks like we're lost",
+        "this is a dead end",
+        "you found a dead end wall",
+        "NullReferenceException",
+        "can you see what's inside this black void?",
+        "NotFoundError",
+        "whoopsie",
+        "wait, what?",
+        "huh?",
+        "missingno.",
+        "undefined",
+        "",
+    ],
+}[status as number] as string[];
+let subtitle = {
+    404: "hmmm, seems like there's isn't anything here",
+}[status as number];
+---
+
+<div class="container mx-auto px-6 grow flex flex-col justify-center gap-2">
+    <h1>{status}: <span id="status-error-title">{titles[0]}</span></h1>
+    <p>{subtitle}</p>
+</div>
+
+<script define:vars={{titles}}>
+    document.getElementById("status-error-title").innerText = titles[Math.floor(Math.random() * titles.length)];
+</script>
+
+<style>
+    @reference "tailwindcss";
+
+	h1 {
+		@apply text-4xl md:text-5xl lg:text-6xl font-bold;
+	}
+</style>

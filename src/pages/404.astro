@@ -1,0 +1,11 @@
+---
+import StatusError from '../components/StatusError.astro';
+import Welcome from '../components/Welcome.astro';
+import Layout from '../layouts/Layout.astro';
+
+import "../styles/global.css";
+---
+
+<Layout title="??? - The Paywall Museum">
+	<StatusError status={404} />
+</Layout>

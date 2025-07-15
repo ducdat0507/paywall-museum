@@ -1,14 +1,13 @@
 [
     {
-        "id": "remove-paywall",
-        "name": "Pay to remove paywall",
+        "id": "listen-to-article",
+        "name": "Pay to listen to article",
         "paywalls": [
             {
-                "imageUrl": "https://placehold.co/600x400",
-                "imageAlt": "Subscribe to remove this paywall",
+                "imageUrl": "/images/wired.com.001.png",
+                "imageAlt": "Screenshot of a website with the text \"Subscribe to listen\" written in bold and underlined. Below is a media player which is grayed out.",
                 "links": [
-                    { "url": "https://example.com/", "type": "paywallPage" },
-                    { "url": "https://example.com/pricing", "type": "pricingPage" }
+                    { "url": "https://www.wired.com/v2/offers/wira01018", "type": "pricingPage" }
                 ]
             }
         ]

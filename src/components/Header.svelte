@@ -21,6 +21,7 @@
             <nav class={`menu-nav ${isMenuOpen ? 'block' : 'hidden'}`}>
                 <ul class="menu-list">
                     <li><a href="/about" class="inline-block menu-link header-link">About</a></li>
+                    <li><a href="/api-docs" class="inline-block menu-link header-link">"API" Docs</a></li>
                     <li><a href="/contact" class="inline-block menu-link header-link">Contribute</a></li>
                 </ul>
             </nav>
