@@ -1,4 +1,6 @@
 ---
+import FAQItem from '../components/FAQItem.astro';
+import FAQSection from '../components/FAQSection.astro';
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 
@@ -7,4 +9,69 @@ import "../styles/global.css";
 
 <Layout title="Welcome - The Paywall Museum">
 	<Welcome />
+	<section class="container mx-auto">
+		<h2 class="mt-20 my-8 px-16 text-center">Somewhat Asked Questions</h2>
+		<FAQSection>
+			<FAQItem>
+				<Fragment slot="question">Why?</Fragment>
+				<p>
+					<strong>Mainly because I can.</strong> 
+					I found the act of putting particular features behind paywalls <i>interesting</i>.
+					Not necessarily a great design choice, but <i>interesting</i> nevertheless.
+				</p>
+			</FAQItem>
+			<FAQItem>
+				<Fragment slot="question">What is this for?</Fragment>
+				<p>
+					A few use cases come into mind:
+				</p>
+				<ul class="list-disc px-8">
+					<li>Getting inspirations for the monetization strategy of your current or next app</li>
+					<li>Getting design references for your paywall</li>
+					<li>Telling someone who complain about a certain paywall that there are other companies that already got away with it</li>
+					<li>Realizing that whatever service you're using could always become greedier</li>
+				</ul>
+			</FAQItem>
+			<FAQItem>
+				<Fragment slot="question">Are these paywalls real?</Fragment>
+				<p>
+					If by "real" you meant that the paywalls are "in production" and deployed on real commercial software, then 
+					yes, they're real.
+				</p>
+				<p>
+					You can see the attributions by going to the landing page of a particular paywall. Note that paywalls
+					can be moved, adjusted or removed by the owners of the original source since they're featured here.
+				</p>
+			</FAQItem>
+			<FAQItem>
+				<Fragment slot="question">Is this website a call for boycotting software featured in here?</Fragment>
+				<p>
+					<strong>No!</strong> Remember that in the end, we all have to get money to spend on food somehow.
+					Some apps or services features in here are actually <i>great</i> despite their paywalls, and hell, by giving
+					attributions on the paywalls I'm basically giving them the free exposure they wanted anyways.
+				</p>
+				<p>
+					If these paywalls are deal-breaking enough for you to not use a particular software, just don't use them.
+					Don't harass the people who put hard work on maintaining them! If you really have to contact someone, suggest alternatives
+					so they can make the software better!
+				</p>
+				<p>
+					If you insist on interpreting this website as a criticism on something, consider it's not on the fact that
+					there is a paywall, but rather <i>what</i> is put behind one.
+				</p>
+			</FAQItem>
+		</FAQSection>
+	</section>
 </Layout>
+
+<style>
+	@reference "tailwindcss";
+
+	h2 {
+		@apply text-3xl md:text-4xl lg:text-5xl font-bold;
+	}
+
+	p + p {
+		@apply mt-4;
+	}
+</style>

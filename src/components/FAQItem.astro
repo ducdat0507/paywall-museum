@@ -1,0 +1,27 @@
+<details name="faq">
+    <summary class="block p-4 pl-13 font-bold bg-amber-950 duration-100 ease-out-circle relative">
+        <slot name="question" />
+    </summary>
+    <div class="px-4 pb-4">
+        <slot />
+    </div>
+</details>
+
+<style>
+    @reference "tailwindcss";
+
+    details:not(:last-child) {
+        @apply border-b-1 border-amber-900;
+    }
+    details summary::before {
+        content: "";
+        transition-timing-function: var(--ease-out-expo);
+        @apply absolute bg-black block size-4 border-b-[0.2em] border-l-[0.2em] top-5 left-5 -rotate-45 duration-150;
+    }
+    details[open] summary {
+        @apply mb-4;
+    }
+    details[open] summary::before {
+        @apply -rotate-135;
+    }
+</style>

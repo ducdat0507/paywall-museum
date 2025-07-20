@@ -1,12 +1,35 @@
 ---
-import PaywallSeriesList from '../../components/PaywallSeriesList.svelte';
-import StatusError from '../../components/StatusError.astro';
+import PaywallList from '../../components/PaywallList.svelte';
 import Layout from '../../layouts/Layout.astro';
-import { getPage } from '../../lib/paywalls';
+import { getFromId, getPage } from '../../lib/paywalls';
+import paywallData from "../../../data/paywalls.json";
 
-import "../styles/global.css";
+import "../../styles/global.css";
+
+export function getStaticPaths() {
+  return paywallData.map((x, i) => ({
+    params: { id: x.id }
+  }))
+}
+
+let paywall = getFromId(Astro.params.id)!;
+let count = paywall.paywalls.length;
 ---
 
 <Layout title="The Paywall Museum">
-	<StatusError />
+  <div class=" bg-gray-900">
+    <div class="container mx-auto p-6 lg:py-12 flex flex-col gap-2">
+      <h1>{paywall.name}</h1>
+      <p>{count} paywall{count == 1 ? "" : "s"} in series</p>
+    </div>
+  </div>
+  <PaywallList {paywall} />
 </Layout>
+
+<style>
+  @reference "tailwindcss";
+
+  h1 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+</style>

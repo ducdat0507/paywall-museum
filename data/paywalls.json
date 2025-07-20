@@ -1,13 +1,55 @@
 [
     {
+        "id": "get-save-slots",
+        "name": "Pay for save slots",
+        "paywalls": [
+            {
+                "imageUrl": "/images/h/d2b5ca33bd970f64a6301fa75ae2eb22.png",
+                "imageAlt": "A popup asking the player to spend \"SV Coins\" to purchase \"Additional Slot: Avatar\".",
+                "attribution": "Metal Gear Survive",
+                "links": [
+                ]
+            }
+        ]
+    },
+    {
+        "id": "gen-less-per-prompt",
+        "name": "Pay to generate less per AI prompt",
+        "paywalls": [
+            {
+                "imageUrl": "/images/ai.leonardo.001.png",
+                "imageAlt": "A field to select the amount of image an AI generator will create. Option \"4\" is selected. Option \"3\" is highlighted and has the diamond icon at the top right corner, signalling the option requires a subscription.",
+                "attribution": "Leonardo.ai",
+                "links": [
+                    { "url": "https://app.leonardo.ai/ai-generations", "type": "paywall" }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "view-browsing-history",
+        "name": "Pay to view browsing history",
+        "paywalls": [
+            {
+                "imageUrl": "/images/net.pixiv.001.png",
+                "imageAlt": "A popup saying \"Join pixiv Premium to see even more results in your Browsing History.\"",
+                "attribution": "pixiv",
+                "links": [
+                    { "url": "https://www.pixiv.net/history.php", "type": "paywall" }
+                ]
+            }
+        ]
+    },
+    {
         "id": "listen-to-article",
         "name": "Pay to listen to article",
         "paywalls": [
             {
-                "imageUrl": "/images/wired.com.001.png",
+                "imageUrl": "/images/com.wired.001.png",
                 "imageAlt": "Screenshot of a website with the text \"Subscribe to listen\" written in bold and underlined. Below is a media player which is grayed out.",
+                "attribution": "WIRED",
                 "links": [
-                    { "url": "https://www.wired.com/v2/offers/wira01018", "type": "pricingPage" }
+                    { "url": "https://www.wired.com/v2/offers/wira01018", "type": "pricing" }
                 ]
             }
         ]

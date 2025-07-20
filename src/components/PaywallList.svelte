@@ -1,13 +1,12 @@
 <script lang="ts">
     import Masonry from 'svelte-bricks';
-    import PaywallSeriesCard from './PaywallSeriesCard.svelte';
+    import PaywallCard from './PaywallCard.svelte';
 
     let {
-        startItems, startPage
+        paywall
     } = $props()
 
-    let page = $state(startPage)
-    let items = $state(startItems)
+    let items = $state(paywall.paywalls)
 
     let [minColWidth, maxColWidth, gap] = [240, 480, 16]
 </script>
@@ -20,6 +19,6 @@
     {gap}
     >
     {#snippet children({ item })}
-        <PaywallSeriesCard {item} />
+        <PaywallCard {item} />
     {/snippet}
 </Masonry>

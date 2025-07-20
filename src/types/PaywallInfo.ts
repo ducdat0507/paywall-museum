@@ -1,3 +1,5 @@
+import type { PricingTypes } from "./PricingTypes"
+
 export type PaywallSeries = {
     id: string,
     name: string,
@@ -7,8 +9,9 @@ export type PaywallSeries = {
 export type PaywallInfo = {
     imageUrl: string,
     imageAlt: string,
+    attribution: string,
     links: {
         url: string,
-        type: string
+        type: PricingTypes
     }[]
 }
