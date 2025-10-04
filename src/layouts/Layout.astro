@@ -1,4 +1,5 @@
 ---
+import astroConfig from "../../astro.config.mjs";
 import Header from "../components/Header.svelte";
 
 
@@ -27,7 +28,7 @@ let { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body class="dark">
-		<Header client:load />
+		<Header client:load base={astroConfig.base} />
 		<slot />
 	</body>
 </html>
@@ -43,6 +44,7 @@ let { title } = Astro.props;
 	body {
 		display: flex;
 		flex-direction: column;
-		height: max(100%, fit-content);
+		height: auto;
+		min-height: 100dvh;
 	}
 </style>

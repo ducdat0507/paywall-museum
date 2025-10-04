@@ -12,5 +12,7 @@ export default defineConfig({
       ]
   },
 
+  base: "/paywall-museum",
+
   integrations: [svelte()]
 });

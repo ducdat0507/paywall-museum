@@ -3,13 +3,14 @@
     import PaywallSeriesCard from './PaywallSeriesCard.svelte';
 
     let {
-        startItems, startPage
+        startItems, startPage,
+        base
     } = $props()
 
     let page = $state(startPage)
     let items = $state(startItems)
 
-    let [minColWidth, maxColWidth, gap] = [240, 480, 16]
+    let [minColWidth, maxColWidth, gap] = [300, 480, 16]
 </script>
 
 <Masonry
@@ -20,6 +21,6 @@
     {gap}
     >
     {#snippet children({ item })}
-        <PaywallSeriesCard {item} />
+        <PaywallSeriesCard {item} {base} />
     {/snippet}
 </Masonry>

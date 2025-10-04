@@ -1,6 +1,8 @@
 <script>
     let isMenuOpen = false;
 
+    let { base } = $props();
+
     function toggleMenu() {
         isMenuOpen = !isMenuOpen;
     }
@@ -10,7 +12,7 @@
     <div class="bg-orange-950 text-white absolute shadow-lg top-0 inset-x-0 ">
         <div class="container mx-auto flex justify-between flex-col md:flex-row items-stretch py-4 px-6">
             <div class="flex justify-between">
-                <a href="/" class="header-link"><h2><i class="text-orange-600">the</i> Paywall Museum</h2></a>
+                <a href={base} class="header-link"><h2><i class="text-orange-600">the</i> Paywall Museum</h2></a>
                 <button 
                     class="menu-button" 
                     on:click={toggleMenu}
@@ -20,8 +22,8 @@
             </div>
             <nav class={`menu-nav ${isMenuOpen ? 'block' : 'hidden'}`}>
                 <ul class="menu-list">
-                    <li><a href="/about" class="inline-block menu-link header-link">About</a></li>
-                    <li><a href="/docs" class="inline-block menu-link header-link">"API" Docs</a></li>
+                    <li><a href={base + "/about"} class="inline-block menu-link header-link">About</a></li>
+                    <li><a href={base + "/docs"} class="inline-block menu-link header-link">"API" Docs</a></li>
                     <li><a href="https://github.com/ducdat0507/paywall-museum" class="inline-block menu-link header-link">Contribute</a></li>
                 </ul>
             </nav>

@@ -1,4 +1,8 @@
-<section class="bg-gray-100 dark:bg-gray-800 min-h-[calc(100%-8em)] flex flex-col justify-end xl:justify-center py-16">
+---
+import astroConfig from "../../astro.config.mjs";
+---
+
+<section class="bg-gray-100 dark:bg-gray-800 min-h-[calc(100svh-8em)] flex flex-col justify-end xl:justify-center py-16">
 	<div class="container mx-auto px-6 text-star space-y-3">
 		<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 dark:text-white">
 			Welcome to<br>
@@ -10,7 +14,7 @@
 		</p>
 		<div>
 			<a
-				href="/"
+				href={astroConfig.base}
 				class="button"
 			>
 				Browse Paywalls

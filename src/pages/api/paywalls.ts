@@ -1,6 +1,6 @@
 
 import type { APIContext } from "astro";
-import * as paywalls from "../../../lib/paywalls";
+import * as paywalls from "../../lib/paywalls";
 
 
 export function GET ({ params, request }: APIContext) {

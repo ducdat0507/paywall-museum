@@ -1,5 +1,75 @@
 [
     {
+        "id": "mute-users",
+        "name": "Pay to mute users",
+        "paywalls": [
+            {
+                "imageUrl": "/images/net.pixiv.002.png",
+                "imageAlt": "A popup saying \"Regular users can mute up to 1 element(s) between users and tags. By becoming a Premium user, you can mute up to 500 elements.\".",
+                "attribution": "pixiv",
+                "links": [
+                    { "url": "https://www.pixiv.net/premium", "type": "pricing" }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "ban-users",
+        "name": "Pay to ban users",
+        "paywalls": [
+            {
+                "imageUrl": "/images/we.cbox.002.png",
+                "imageAlt": "Screenshot of a website's admin panel with the text \"You can have up to 5 bans in force at a time. Upgrade to increase the limit.\".",
+                "attribution": "Cbox",
+                "links": [
+                    { "url": "https://www.cbox.ws/productss", "type": "pricing" },
+                    { "url": "https://www.cbox.ws/admin?bans", "type": "paywall" }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "move-files",
+        "name": "Pay to move files",
+        "paywalls": [
+            {
+                "imageUrl": "/images/h/adebb838635642002928fc4c8c6c28e153f756d4.png",
+                "imageAlt": "Reordering artworks is a prime feature. You can use it after you register for Prime Membership. Would you like to see the product info?",
+                "attribution": "ibisPaint X",
+                "links": [
+                ]
+            }
+        ]
+    },
+    {
+        "id": "enable-dark-theme",
+        "name": "Pay for dark theme",
+        "paywalls": [
+            {
+                "imageUrl": "/images/com.apkmirror.001.png",
+                "imageAlt": "APKMirror now has an automatic dark theme, exclusively available to APKMirror PREMIUM members. Don’t worry, you can force a dark or light UI if you want.",
+                "attribution": "APKMirror",
+                "links": [
+                    { "url": "https://www.apkmirror.com/premium/", "type": "pricing" }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "change-someone-elses-bio",
+        "name": "Pay to change someone else's bio",
+        "paywalls": [
+            {
+                "imageUrl": "/images/com.somethingawful.001.png",
+                "imageAlt": "A checkout form asking the user to pay money to be able to change your title or that of someone else.",
+                "attribution": "Something Awful",
+                "links": [
+                    { "url": "https://store.somethingawful.com/products/titlechange.php", "type": "checkout" }
+                ]
+            }
+        ]
+    },
+    {
         "id": "get-save-slots",
         "name": "Pay for save slots",
         "paywalls": [

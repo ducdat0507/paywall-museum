@@ -7,6 +7,9 @@ export const pricingTypes = {
     "paywall": {
         name: "Paywall page"
     },
+    "checkout": {
+        name: "Checkout page"
+    },
 }
 
 export type PricingTypes = keyof typeof pricingTypes;

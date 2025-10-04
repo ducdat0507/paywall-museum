@@ -1,13 +1,18 @@
 ---
+import { getConfiguredImageService } from 'astro:assets';
 import PaywallSeriesList from '../components/PaywallSeriesList.svelte';
 import Layout from '../layouts/Layout.astro';
 import { getPage } from '../lib/paywalls';
 
+import astroConfig from '../../astro.config.mjs';
+
 import "../styles/global.css";
+
+console.log(astroConfig);
 ---
 
 <Layout title="The Paywall Museum">
 	<main class="container mx-auto">
-		<PaywallSeriesList startPage={1} startItems={getPage(0)} client:load  />
+		<PaywallSeriesList startPage={1} startItems={getPage(0)} base={astroConfig.base} client:load  />
 	</main>
 </Layout>

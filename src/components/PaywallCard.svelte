@@ -4,16 +4,18 @@
   import { pricingTypes } from '../types/PricingTypes';
 
     let {
-        item
+        item,
+        base
     }: {
-        item: PaywallInfo
+        item: PaywallInfo,
+        base: string
     } = $props()
     
 </script>
 
 <section class="item border-1 bg-amber-100 text-black border-amber-200 rounded-xs shadow-sm">
     <div class="border-1 bg-amber-200 border-amber-200 m-0.5 overflow-hidden">
-        <img class="w-full max-h-80 object-contain" src={item.imageUrl} alt={item.imageAlt} />
+        <img class="w-full max-h-80 object-contain" src={base + item.imageUrl} alt={item.imageAlt} />
     </div>
     <p class="mb-1">
         <span class="float-left opacity-75">{item.attribution}</span>

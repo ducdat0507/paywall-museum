@@ -3,12 +3,13 @@
     import PaywallCard from './PaywallCard.svelte';
 
     let {
-        paywall
+        paywall,
+        base
     } = $props()
 
     let items = $state(paywall.paywalls)
 
-    let [minColWidth, maxColWidth, gap] = [240, 480, 16]
+    let [minColWidth, maxColWidth, gap] = [300, 480, 16]
 </script>
 
 <Masonry
@@ -19,6 +20,6 @@
     {gap}
     >
     {#snippet children({ item })}
-        <PaywallCard {item} />
+        <PaywallCard {item} {base} />
     {/snippet}
 </Masonry>

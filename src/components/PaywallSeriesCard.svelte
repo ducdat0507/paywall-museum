@@ -2,14 +2,15 @@
     import Masonry from 'svelte-bricks'
 
     let {
-        item
+        item,
+        base
     } = $props()
 </script>
 
 <section class="item border-1 bg-amber-100 text-black border-amber-200 rounded-xs shadow-sm">
-    <a href={"/pay-to/" + item.id} class="block">
+    <a href={base + "/pay-to/" + item.id} class="block">
         <div class="border-1 bg-amber-200 border-amber-200 m-0.5 overflow-hidden">
-            <img class="w-full max-h-80 object-contain" src={item.paywalls[0].imageUrl} alt={item.paywalls[0].imageAlt} />
+            <img class="w-full max-h-80 object-contain" src={base + item.paywalls[0].imageUrl} alt={item.paywalls[0].imageAlt} />
         </div>
         <h2 class="mb-1">{item.name}</h2>
     </a>

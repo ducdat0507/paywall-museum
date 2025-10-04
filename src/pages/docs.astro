@@ -8,6 +8,7 @@ import APIDocs from '../components/APIDocs.svelte';
 
 import "../styles/global.css";
 import { getFromId, getPage, totalPages } from '../lib/paywalls';
+import astroConfig from '../../astro.config.mjs';
 
 ---
 
@@ -19,7 +20,7 @@ import { getFromId, getPage, totalPages } from '../lib/paywalls';
 		</h1>
 		<div class="flex flex-col gap-4">
 			<div class="api-entry">
-				<h2>GET <code>/api/paywall/</code></h2>
+				<h2>GET <code>{astroConfig.base}/api/paywall/</code></h2>
 				<p>
 					Get basic paywall information, such as the total number of pages.
 				</p>
@@ -29,7 +30,7 @@ import { getFromId, getPage, totalPages } from '../lib/paywalls';
 				}</code></pre>
 			</div>
 			<div class="api-entry">
-				<h2>GET <code>/api/paywall/page/:page</code></h2>
+				<h2>GET <code>{astroConfig.base}/api/paywall/page/:page</code></h2>
 				<p>
 					Get a specific page of paywall series (zero-indexed).<br/>
 					Replace <code>:page</code> with a whole number from 0 to the value of <code>totalPages</code> returned by /api/paywall/ (exclusive).
@@ -40,7 +41,7 @@ import { getFromId, getPage, totalPages } from '../lib/paywalls';
 				}</code></pre>
 			</div>
 			<div class="api-entry">
-				<h2>GET <code>/api/paywall/id/:id</code></h2>.
+				<h2>GET <code>{astroConfig.base}/api/paywall/id/:id</code></h2>.
 				<p>
 					Get a specific paywall series from an ID.<br/>
 					Replace <code>:id</code> with the ID of a paywall series.
